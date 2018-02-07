@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+	<!-- Definition of the appenders Console and Log File -->
+	<Appenders>
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n" />
+		</Console>
+
+		<File name="LogFile"
+			fileName="C:/Users/Tim/Daten/Java/Applications/games/logs/output_${date:yyyy}_${date:MM}_${date:dd}_${date:HH}_${date:mm}_${date:ss}_${date:SSS}.log"
+			bufferedIO="true">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n" />
+		</File>
+
+	</Appenders>
+
+	<Loggers>
+
+		<Logger name="de.domain.games.logger.ConsoleLogger" level="trace"
+			additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+
+		<Logger name="de.domain.games.logger.FileLogger" level="trace"
+			additivity="false">
+			<AppenderRef ref="LogFile" />
+		</Logger>
+
+		<Root level="error">
+			<AppenderRef ref="LogFile" />
+		</Root>
+	</Loggers>
+
+</Configuration>

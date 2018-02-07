@@ -1,0 +1,29 @@
+timgames - Architektur
+======================
+Hauptpfad der Anwendung:
+
+C:\Users\Tim\Documents\ChessBase\TimBase
+					\Archiv
+					\Buch
+					\Eröffnung
+					\Turnier
+
+1) Aufruf der Hauptklasse (in MANIFEST.MF)
+==========================================
+Main-Class: de.domain.timgames.control.Main
+Class-Path: ./properties/
+  ../../Libraries/apache-log4j-2.2-bin/log4j-api-2.2.jar
+  ../../Libraries/apache-log4j-2.2-bin/log4j-core-2.2.jar
+  ../../Libraries/commons-io-2.4/commons-io-2.4.jar        
+
+Main	
+	==>	main()
+	==>	run()
+	==>	Control.run()	
+		==>	setLookAndFeel();
+		==>	Dialog.start();		
+			--------------------
+			==>	initialize();
+			==>	setPanels();
+			==>	setControls();
+			==>	build();
