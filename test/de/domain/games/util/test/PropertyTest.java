@@ -42,7 +42,7 @@ public class PropertyTest {
 		EXPECTED_MY_BLACK_PATH = new String("C:\\Users\\Tim\\Documents\\ChessBase\\TimBase\\TimEröffnung\\Schwarz");
 		EXPECTED_MY_WHITE_PATH = new String("C:\\Users\\Tim\\Documents\\ChessBase\\TimBase\\TimEröffnung\\Wei�");	
 		EXPECTED_TOURNAMENT_PATH = new String("C:\\Users\\Tim\\Documents\\ChessBase\\TimBase\\Turnier");
-		EXPECTED_WHITE_PATH = new String("C:\\Users\\Tim\\Documents\\ChessBase\\TimBase\\Er�ffnung\\Weiß");
+		EXPECTED_WHITE_PATH = new String("C:\\Users\\Tim\\Documents\\ChessBase\\TimBase\\Eröffnung\\Weiß");
 		
 		// Setting and loading the properties
 		Property.setProperties();

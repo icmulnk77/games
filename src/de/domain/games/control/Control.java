@@ -15,13 +15,13 @@ import de.domain.games.dialog.Dialog;
  * @see de.domain.games.dialog.Dialog
  * @author Tim Schmitz
  * @version 2016/04/26
+ * @version 2018/02/07
  */
 
 public class Control {
 
 	// Parameter to control the workflow of the application
-	private static final Logger FileLogger = LogManager.getLogger("de.domain.timgames.logger.FileLogger");
-	private static final Logger ConsoleLogger = LogManager.getLogger("de.domain.timgames.logger.ConsoleLogger");
+	private static final Logger LOG = LogManager.getLogger(Control.class.getName());
 
 	
 	/**
@@ -29,8 +29,7 @@ public class Control {
 	 * dialog
 	 */
 	public static void run() {
-		ConsoleLogger.trace("Main main routine starts...");
-		FileLogger.trace("Main main routine starts...");
+		LOG.trace("run routine starts...");
 		setLookAndFeel();
 		Dialog.start();
 	}

@@ -8,6 +8,12 @@
 			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n" />
 		</Console>
 
+        <File name="File"
+            fileName="C://Users/Tim/Daten/Java/Applications/games/logs/output_${date:yyyy}_${date:MM}_${date:dd}_${date:HH}_${date:mm}_${date:ss}_${date:SSS}.log"
+            bufferedIO="true">
+            <PatternLayout pattern="%d{HH:mm:ss:SSS} %-5level %logger{36} - %msg%n" />
+        </File>
+
 		<File name="LogFile"
 			fileName="C:/Users/Tim/Daten/Java/Applications/games/logs/output_${date:yyyy}_${date:MM}_${date:dd}_${date:HH}_${date:mm}_${date:ss}_${date:SSS}.log"
 			bufferedIO="true">
@@ -16,6 +22,17 @@
 
 	</Appenders>
 
+    <Loggers>
+
+        <Root level="trace">
+            <AppenderRef ref="File" />
+            <AppenderRef ref="Console" />
+        </Root>
+
+    </Loggers>
+
+
+    <!--  
 	<Loggers>
 
 		<Logger name="de.domain.games.logger.ConsoleLogger" level="trace"
@@ -31,6 +48,6 @@
 		<Root level="error">
 			<AppenderRef ref="LogFile" />
 		</Root>
-	</Loggers>
+	</Loggers> -->
 
 </Configuration>
